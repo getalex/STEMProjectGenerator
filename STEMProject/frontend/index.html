@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STEM Project Generator</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>💡</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Landing Page -->
+    <div id="landingPage" class="page active">
+      <div class="landing-content">
+        <h1>🚀 STEM Project Generator</h1>
+        <p>Get creative and fun project ideas for kids!</p>
+        
+        <div class="age-selector">
+          <label for="ageRange">Choose age group:</label>
+          <select id="ageRange" class="age-select">
+            <option value="any">Any Age (I'll pick anything!)</option>
+            <option value="6-8">Ages 6-8 (Early Elementary)</option>
+            <option value="9-11">Ages 9-11 (Upper Elementary)</option>
+            <option value="12-14">Ages 12-14 (Middle School)</option>
+            <option value="15-17">Ages 15-17 (High School)</option>
+          </select>
+        </div>
+
+        <button id="getProjectBtn" class="primary-btn">
+          💡 Give me a project idea
+        </button>
+      </div>
+    </div>
+
+    <!-- Project Display Page -->
+    <div id="projectPage" class="page">
+      <div class="loading" id="loadingSpinner" style="display: none;">
+        <div class="spinner"></div>
+        <p>Generating an amazing project...</p>
+      </div>
+
+      <div class="project-container" id="projectContainer" style="display: none;">
+        <button class="back-btn" id="backBtn">&larr; Back</button>
+
+        <div class="project-header">
+          <h2 id="projectName"></h2>
+          <div class="filter-info" id="filterInfo"></div>
+          <div class="project-meta">
+            <span class="badge" id="projectAgeRange"></span>
+            <span class="badge difficulty" id="difficulty"></span>
+            <span class="badge time" id="timeRequired"></span>
+          </div>
+        </div>
+
+        <div class="project-content">
+          <!-- Materials Section -->
+          <section class="section">
+            <h3>📦 Materials Needed</h3>
+            <ul id="materialsList" class="materials-list"></ul>
+          </section>
+
+          <!-- Instructions Section -->
+          <section class="section">
+            <h3>📋 Instructions</h3>
+            <ol id="instructionsList" class="instructions-list"></ol>
+          </section>
+
+          <!-- Learning Concepts Section -->
+          <section class="section">
+            <h3>🧠 Learning Concepts</h3>
+            <p id="learningConcepts"></p>
+          </section>
+
+          <!-- Fun Fact Section -->
+          <section class="section">
+            <h3>⭐ Fun Fact</h3>
+            <p id="funFact"></p>
+          </section>
+        </div>
+
+        <!-- Feedback Buttons -->
+        <div class="feedback-buttons">
+          <button id="similarBtn" class="secondary-btn">
+            🔄 Similar Idea
+          </button>
+          <button id="newBtn" class="primary-btn">
+            ✨ Brand New Idea
+          </button>
+        </div>
+
+        <!-- Error Message -->
+        <div id="errorMessage" class="error-message" style="display: none;"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
