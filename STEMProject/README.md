@@ -2,6 +2,8 @@
 
 A web application that generates creative STEM project ideas for kids using OpenAI's API. Users can get project ideas, view materials and instructions, and request similar or completely new ideas.
 
+[#file:stemgeneratorgif.gif]
+
 ## Features
 
 ✨ **User-Friendly Interface**
